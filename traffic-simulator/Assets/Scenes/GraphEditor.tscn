@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://dovntd6kyx65n"]
+
+[ext_resource type="Script" uid="uid://ctmyae0di6js1" path="res://Assets/Scripts/UI/GraphEditorUI.cs" id="1_rnjtu"]
+
+[node name="GraphEditor" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_rnjtu")
+
+[node name="GraphCanvas" type="Node2D" parent="."]
+
+[node name="UI" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 446.0
+offset_top = 8.0
+offset_right = 486.0
+offset_bottom = 48.0
+
+[node name="Agregar Nodo" type="Button" parent="UI"]
+layout_mode = 2
+text = "Agregar Nodo"
+
+[node name="Conectar Nodos" type="Button" parent="UI"]
+layout_mode = 2
+text = "Conectar Nodos"
+
+[node name="HSeparator" type="HSeparator" parent="UI"]
+layout_mode = 2
+
+[node name="Peso de la arista" type="Label" parent="UI"]
+layout_mode = 2
+text = "Peso de la arista"
+
+[node name="WeightSpinBox" type="SpinBox" parent="UI"]
+layout_mode = 2
+min_value = 0.1
+step = 0.1
+value = 0.1
+
+[node name="BlockCheckBox" type="CheckBox" parent="UI"]
+layout_mode = 2
+text = "Bloqueada"
+
+[node name="Eliminar Nodo" type="Button" parent="UI"]
+layout_mode = 2
+text = "Eliminar Nodo"
+
+[node name="Eliminar Arista" type="Button" parent="UI"]
+layout_mode = 2
+text = "Eliminar Arista"
