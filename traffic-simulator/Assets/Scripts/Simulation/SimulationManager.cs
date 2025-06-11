@@ -3,15 +3,13 @@ using System;
 
 public partial class SimulationManager : Node
 {
-    [Export]
-    public Graph Graph;
+    [Export] public TrafficGraph Graph;
+    [Export] public VehicleManager VehicleManager;
 
-    [Export]
-    public VehicleManager VehicleManager;
-
+    // Inicia la simulación generando vehículos con rutas aleatorias
     public void RunSimulation(int vehicleCount)
     {
-        // Creamos un Godot.Collections.Array<string> e insertamos todas las llaves
+        // Lista de IDs de nodos para elegir puntos aleatorios
         var keyArray = new Godot.Collections.Array<string>();
         foreach (var k in Graph.GetAllNodes().Keys)
             keyArray.Add(k);
@@ -31,5 +29,4 @@ public partial class SimulationManager : Node
             VehicleManager.SpawnVehicle(startId, endId);
         }
     }
-
 }

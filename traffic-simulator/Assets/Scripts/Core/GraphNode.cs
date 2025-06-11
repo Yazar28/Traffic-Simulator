@@ -1,15 +1,16 @@
 using Godot;
 using System;
 
-public partial class Node : Node2D
+
+public partial class GraphNode : Node2D
 {
-    public string NodeId { get; set; }
-    public Godot.Collections.Array<Edge> Edges = new Godot.Collections.Array<Edge>();
+    [Export] public string NodeId { get; set; }
+    public Godot.Collections.Array<GraphEdge> Edges = new Godot.Collections.Array<GraphEdge>();
 
     private bool isDragging = false;
-    private const float radius = 10f; // Radio aproximado de tu ColorRect (20x20 / 2)
+    private const float radius = 10f; // Radio de tu ColorRect (20x20 / 2)
 
-    public void AddEdge(Edge edge)
+    public void AddEdge(GraphEdge edge)
     {
         Edges.Add(edge);
     }

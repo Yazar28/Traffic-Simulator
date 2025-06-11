@@ -3,22 +3,24 @@ using System;
 
 public partial class Pathfinding : Node
 {
-    public static Godot.Collections.Array<Node> Dijkstra(Graph graph, string startId, string endId)
+    // Calcula la ruta más corta usando Dijkstra
+    public static Godot.Collections.Array<GraphNode> CalculateDijkstra(TrafficGraph graph, string startId, string endId)
     {
         var nodes = graph.GetAllNodes();
         var distances = new Godot.Collections.Dictionary<string, float>();
         var previous = new Godot.Collections.Dictionary<string, string>();
         var unvisited = new Godot.Collections.Array<string>();
 
-        foreach (string id in nodes.Keys)
+        // Inicialización
+        foreach (var id in nodes.Keys)
         {
             distances[id] = float.PositiveInfinity;
             previous[id] = null;
             unvisited.Add(id);
         }
-
         distances[startId] = 0;
 
+        // Bucle principal
         while (unvisited.Count > 0)
         {
             string currentId = GetMinDistanceNode(distances, unvisited);
@@ -26,15 +28,15 @@ public partial class Pathfinding : Node
                 break;
 
             unvisited.Remove(currentId);
-            Node currentNode = nodes[currentId];
+            var currentNode = nodes[currentId];
 
-            foreach (Edge edge in currentNode.Edges)
+            foreach (var edge in currentNode.Edges)
             {
                 string neighborId = edge.EndNode.NodeId;
                 if (!unvisited.Contains(neighborId)) continue;
 
                 float alt = distances[currentId] + edge.Weight;
-                if (alt < (float)distances[neighborId])
+                if (alt < distances[neighborId])
                 {
                     distances[neighborId] = alt;
                     previous[neighborId] = currentId;
@@ -45,25 +47,27 @@ public partial class Pathfinding : Node
         return BuildPath(previous, nodes, startId, endId);
     }
 
+    // Encuentra el nodo sin visitar con la distancia mínima
     private static string GetMinDistanceNode(Godot.Collections.Dictionary<string, float> distances, Godot.Collections.Array<string> unvisited)
     {
-        float minDistance = float.PositiveInfinity;
+        float minDist = float.PositiveInfinity;
         string minNode = null;
-        foreach (string id in unvisited)
+        foreach (var id in unvisited)
         {
-            if ((float)distances[id] < minDistance)
+            if (distances[id] < minDist)
             {
-                minDistance = (float)distances[id];
+                minDist = distances[id];
                 minNode = id;
             }
         }
         return minNode;
     }
 
-    private static Godot.Collections.Array<Node> BuildPath(Godot.Collections.Dictionary<string, string> previous, Godot.Collections.Dictionary<string, Node> nodes, string startId, string endId)
+    // Reconstruye la ruta desde el mapa "previous"
+    private static Godot.Collections.Array<GraphNode> BuildPath(Godot.Collections.Dictionary<string, string> previous, Godot.Collections.Dictionary<string, GraphNode> nodes, string startId, string endId)
     {
-        var path = new Godot.Collections.Array<Node>();
-        string currentId = endId;
+        var path = new Godot.Collections.Array<GraphNode>();
+        var currentId = endId;
 
         while (currentId != null)
         {
@@ -72,7 +76,7 @@ public partial class Pathfinding : Node
         }
 
         if (path.Count == 0 || path[0].NodeId != startId)
-            return new Godot.Collections.Array<Node>(); // No path
+            return new Godot.Collections.Array<GraphNode>();
 
         return path;
     }

@@ -7,122 +7,45 @@ public partial class GraphEditorUI : Control
     [Export] public PackedScene NodePrefab;
     [Export] public PackedScene EdgePrefab;
     [Export] public Node2D GraphCanvas;
-    [Export] public Graph Graph;
+    [Export] public TrafficGraph Graph;
 
-    private Node firstSelectedNode = null;
+    private GraphNode firstSelectedNode = null;
     private int nodeCounter = 0;
-    private Edge selectedEdge = null;
-
+    private GraphEdge selectedEdge = null;
 
     public override void _Ready()
     {
-        // Conexión correcta de botones
-        GetNode<Button>("UI/Agregar Nodo").Pressed += OnAddNodePressed;
-        GetNode<Button>("UI/Conectar Nodos").Pressed += OnConnectNodesPressed;
-        GetNode<Button>("UI/Eliminar Nodo").Pressed += OnDeleteNodePressed;
-        GetNode<Button>("UI/Eliminar Arista").Pressed += OnDeleteEdgePressed;
+        // Conectar botones
+        GetNode<Button>("UI/Agregar Nodo")
+            .Connect("pressed", new Callable(this, nameof(OnAddNodePressed)));
+        GetNode<Button>("UI/Conectar Nodos")
+            .Connect("pressed", new Callable(this, nameof(OnConnectNodesPressed)));
+        GetNode<Button>("UI/Eliminar Nodo")
+            .Connect("pressed", new Callable(this, nameof(OnDeleteNodePressed)));
+        GetNode<Button>("UI/Eliminar Arista")
+            .Connect("pressed", new Callable(this, nameof(OnDeleteEdgePressed)));
 
-        // Conexión correcta de otros controles
-        GetNode<SpinBox>("UI/WeightSpinBox").ValueChanged += OnWeightChanged;
-        GetNode<CheckBox>("UI/BlockCheckBox").Toggled += OnBlockToggled;
+        // Conectar controles de edición de arista
+        GetNode<SpinBox>("UI/WeightSpinBox")
+            .Connect("value_changed", new Callable(this, nameof(OnWeightChanged)));
+        GetNode<CheckBox>("UI/BlockCheckBox")
+            .Connect("toggled", new Callable(this, nameof(OnBlockToggled)));
 
-        // Ocultar controles inicialmente
+        // Ocultar controles hasta selección
         GetNode<SpinBox>("UI/WeightSpinBox").Visible = false;
         GetNode<CheckBox>("UI/BlockCheckBox").Visible = false;
     }
-    private void OnDeleteNodePressed()
-    {
-        // Detectar nodo bajo el mouse
-        Node node = GetClosestNodeToMouse();
-        if (node == null)
-        {
-            GD.Print("No hay nodo cerca del cursor");
-            return;
-        }
-
-        // 1) Lógica: eliminar del Graph
-        Graph.RemoveNode(node.NodeId);
-
-        // 2) Visual: quitar de escena y también quitar cualquier arista que referencie
-        //   a) quitar todas las aristas hijas de GraphCanvas
-        foreach (var child in GraphCanvas.GetChildren())
-        {
-            if (child is Edge edge &&
-                (edge.StartNode == node || edge.EndNode == node))
-            {
-                edge.QueueFree();
-            }
-        }
-
-        //   b) finalmente eliminar el nodo
-        node.QueueFree();
-    }
-
-    private void OnDeleteEdgePressed()
-    {
-        Vector2 mousePos = GetLocalMousePosition();
-        Edge edge = FindEdgeUnderMouse(mousePos);
-        if (edge == null)
-        {
-            GD.Print("No hay arista cerca del cursor");
-            return;
-        }
-
-        // 1) Lógica: eliminar en el Graph
-        Graph.RemoveEdge(edge.StartNode, edge.EndNode);
-
-        // 2) Visual: quitar la línea
-        edge.QueueFree();
-    }
-
 
     public override void _UnhandledInput(InputEvent @event)
     {
-        if (@event is InputEventMouseButton mb
-            && mb.ButtonIndex == MouseButton.Left
-            && mb.Pressed)
+        if (@event is InputEventMouseButton mb && mb.ButtonIndex == MouseButton.Left && mb.Pressed)
         {
-            Edge clicked = FindEdgeUnderMouse(GetLocalMousePosition());
+            var clicked = FindEdgeUnderMouse(GetLocalMousePosition());
             SelectEdge(clicked);
         }
     }
 
-    private Edge FindEdgeUnderMouse(Vector2 mousePos)
-    {
-        foreach (var child in GraphCanvas.GetChildren())
-        {
-            if (child is Edge edge)
-            {
-                // Calculamos la distancia del punto al segmento [A,B]
-                Vector2 a = edge.Points[0];
-                Vector2 b = edge.Points[1];
-                float dist = DistancePointToSegment(mousePos, a, b);
-                if (dist < 8f)  // tolerancia en píxeles
-                    return edge;
-            }
-        }
-        return null;
-    }
-
-    // Función auxiliar
-    private float DistancePointToSegment(Vector2 p, Vector2 a, Vector2 b)
-    {
-        Vector2 ab = b - a;
-        float ab2 = ab.LengthSquared();
-        if (ab2 == 0)
-            return p.DistanceTo(a);  // A y B coinciden
-
-        // Proyección de (p–a) sobre ab, normalizada a [0,1]
-        float t = (p - a).Dot(ab) / ab2;
-        t = Mathf.Clamp(t, 0, 1);
-
-        Vector2 projection = a + ab * t;
-        return p.DistanceTo(projection);
-    }
-
-
-
-    private void SelectEdge(Edge edge)
+    private void SelectEdge(GraphEdge edge)
     {
         selectedEdge = edge;
         var weightSpin = GetNode<SpinBox>("UI/WeightSpinBox");
@@ -132,8 +55,7 @@ public partial class GraphEditorUI : Control
         {
             weightSpin.Visible = true;
             blockCheck.Visible = true;
-
-            // Usar métodos seguros para asignación inicial
+            // Asignación sin señales
             weightSpin.SetValueNoSignal(edge.Weight);
             blockCheck.SetPressedNoSignal(edge.IsBlocked);
         }
@@ -142,6 +64,32 @@ public partial class GraphEditorUI : Control
             weightSpin.Visible = false;
             blockCheck.Visible = false;
         }
+    }
+
+    private GraphEdge FindEdgeUnderMouse(Vector2 mousePos)
+    {
+        foreach (var child in GraphCanvas.GetChildren())
+        {
+            if (child is GraphEdge edge)
+            {
+                var a = edge.Points[0];
+                var b = edge.Points[1];
+                if (DistancePointToSegment(mousePos, a, b) < 8f)
+                    return edge;
+            }
+        }
+        return null;
+    }
+
+    private float DistancePointToSegment(Vector2 p, Vector2 a, Vector2 b)
+    {
+        var ab = b - a;
+        var ab2 = ab.LengthSquared();
+        if (ab2 == 0) return p.DistanceTo(a);
+        var t = (p - a).Dot(ab) / ab2;
+        t = Mathf.Clamp(t, 0, 1);
+        var proj = a + ab * t;
+        return p.DistanceTo(proj);
     }
 
     private void OnWeightChanged(double value)
@@ -153,10 +101,11 @@ public partial class GraphEditorUI : Control
     {
         selectedEdge?.ToggleBlocked(pressed);
     }
+
     private void OnAddNodePressed()
     {
-        Node node = NodePrefab.Instantiate<Node>();
-        node.Position = GetLocalMousePosition(); // ubicación en el lienzo
+        var node = NodePrefab.Instantiate<GraphNode>();
+        node.Position = GetLocalMousePosition();
         node.NodeId = "N" + nodeCounter++;
         node.GetNode<Label>("Label").Text = node.NodeId;
         Graph.AddNode(node);
@@ -167,52 +116,52 @@ public partial class GraphEditorUI : Control
     {
         if (firstSelectedNode == null)
         {
-            GD.Print("Selecciona el primer nodo");
+            GD.Print("Selecciona el primer nodo antes de conectar");
             return;
         }
+        var second = GetClosestNodeToMouse();
+        if (second == null || second == firstSelectedNode) return;
 
-        // Buscar nodo más cercano al mouse (como ejemplo)
-        Node secondNode = GetClosestNodeToMouse();
-        if (secondNode == null || secondNode == firstSelectedNode)
-        {
-            GD.Print("Segundo nodo no válido");
-            return;
-        }
-
-        // Crear arista visual
-        Edge edge = EdgePrefab.Instantiate<Edge>();
-        edge.Initialize(firstSelectedNode, secondNode, 1f); // peso fijo por ahora
-        edge.Points = new Vector2[] {
-         firstSelectedNode.GlobalPosition,
-         secondNode.GlobalPosition
-       };
-        Graph.AddEdge(firstSelectedNode.NodeId, secondNode.NodeId, 1f);
+        var edge = EdgePrefab.Instantiate<GraphEdge>();
+        edge.Initialize(firstSelectedNode, second, 1f);
+        Graph.AddEdge(firstSelectedNode.NodeId, second.NodeId, 1f);
         GraphCanvas.AddChild(edge);
         firstSelectedNode = null;
     }
 
-    private Node GetClosestNodeToMouse()
+    private void OnDeleteNodePressed()
     {
-        Vector2 mousePos = GetLocalMousePosition();
-        float minDist = 30f; // tolerancia de clic
-        Node closest = null;
+        var node = GetClosestNodeToMouse();
+        if (node == null) return;
+        Graph.RemoveNode(node.NodeId);
+        // Liberar aristas relacionadas
+        foreach (var child in GraphCanvas.GetChildren())
+            if (child is GraphEdge e && (e.StartNode == node || e.EndNode == node))
+                e.QueueFree();
+        node.QueueFree();
+    }
 
-        foreach (Node child in GraphCanvas.GetChildren())
-        {
-            if (child is Node node)
+    private void OnDeleteEdgePressed()
+    {
+        var edge = FindEdgeUnderMouse(GetLocalMousePosition());
+        if (edge == null) return;
+        Graph.RemoveEdge(edge.StartNode, edge.EndNode);
+        edge.QueueFree();
+    }
+
+    private GraphNode GetClosestNodeToMouse()
+    {
+        var mouse = GetLocalMousePosition();
+        float minDist = 30f;
+        GraphNode closest = null;
+        foreach (var child in GraphCanvas.GetChildren())
+            if (child is GraphNode node)
             {
-                if (mousePos.DistanceTo(node.Position) < minDist)
-                {
-                    minDist = mousePos.DistanceTo(node.Position);
-                    closest = node;
-                }
+                var d = mouse.DistanceTo(node.Position);
+                if (d < minDist) { minDist = d; closest = node; }
             }
-        }
         return closest;
     }
 
-    public void SetSelectedNode(Node node)
-    {
-        firstSelectedNode = node;
-    }
+    public void SetSelectedNode(GraphNode node) => firstSelectedNode = node;
 }

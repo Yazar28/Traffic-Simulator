@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c52kbm876lp55"]
+
+[ext_resource type="Script" uid="uid://cew3j0nxpoxy0" path="res://Assets/Scripts/Core/GraphEdge.cs" id="1_d5urw"]
+
+[node name="Edge" type="Line2D"]
+width = 4.0
+antialiased = true
+script = ExtResource("1_d5urw")

@@ -3,36 +3,36 @@
   "WorkspaceRootPath": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Core\\Node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6C2C452-9735-49FA-BC26-26AB0915269D}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\core\\graphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6C2C452-9735-49FA-BC26-26AB0915269D}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\core\\graphnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Prefabs\\Edge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Prefabs\\Edge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6C2C452-9735-49FA-BC26-26AB0915269D}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\core\\graphedge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6C2C452-9735-49FA-BC26-26AB0915269D}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\core\\graphedge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\ui\\grapheditorui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\ui\\grapheditorui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6C2C452-9735-49FA-BC26-26AB0915269D}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\core\\trafficgraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6C2C452-9735-49FA-BC26-26AB0915269D}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\core\\trafficgraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\simulation\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\simulation\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6C2C452-9735-49FA-BC26-26AB0915269D}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\simulation\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6C2C452-9735-49FA-BC26-26AB0915269D}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\simulation\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\core\\graph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\core\\graph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6C2C452-9735-49FA-BC26-26AB0915269D}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\simulation\\vehiclemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6C2C452-9735-49FA-BC26-26AB0915269D}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\simulation\\vehiclemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\core\\pathfinding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\core\\pathfinding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6C2C452-9735-49FA-BC26-26AB0915269D}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\simulation\\simulationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6C2C452-9735-49FA-BC26-26AB0915269D}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\simulation\\simulationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\simulation\\simulationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\simulation\\simulationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6C2C452-9735-49FA-BC26-26AB0915269D}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\ui\\grapheditorui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6C2C452-9735-49FA-BC26-26AB0915269D}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\ui\\grapheditorui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\simulation\\vehiclemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\simulation\\vehiclemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6C2C452-9735-49FA-BC26-26AB0915269D}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\core\\pathfinding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6C2C452-9735-49FA-BC26-26AB0915269D}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\core\\pathfinding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,54 +58,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Node.cs",
-              "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Node.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\Node.cs",
-              "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Node.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Core\\Node.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Pathfinding.cs",
+              "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Pathfinding.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\Pathfinding.cs",
+              "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Pathfinding.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\Pathfinding.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAkwBIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T06:28:31.551Z",
+              "WhenOpened": "2025-06-11T20:07:56.104Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Edge.cs",
-              "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Prefabs\\Edge.cs",
-              "RelativeDocumentMoniker": "Assets\\Prefabs\\Edge.cs",
-              "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Prefabs\\Edge.cs",
-              "RelativeToolTip": "Assets\\Prefabs\\Edge.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T06:27:00.842Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "GraphEditorUI.cs",
               "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\UI\\GraphEditorUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\GraphEditorUI.cs",
               "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\UI\\GraphEditorUI.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\GraphEditorUI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAANoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIMAAAAAAAAAAADwvwMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T06:24:49.515Z",
+              "WhenOpened": "2025-06-11T20:02:31.323Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
+              "Title": "SimulationManager.cs",
+              "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Simulation\\SimulationManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Simulation\\SimulationManager.cs",
+              "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Simulation\\SimulationManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Simulation\\SimulationManager.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAswAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T20:01:44.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "VehicleManager.cs",
               "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Simulation\\VehicleManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Simulation\\VehicleManager.cs",
               "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Simulation\\VehicleManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Simulation\\VehicleManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T06:01:35.118Z"
+              "WhenOpened": "2025-06-11T20:01:00.74Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -115,46 +116,49 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Simulation\\Vehicle.cs",
               "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Simulation\\Vehicle.cs",
               "RelativeToolTip": "Assets\\Scripts\\Simulation\\Vehicle.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T06:01:34.18Z",
+              "WhenOpened": "2025-06-11T20:00:23.607Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SimulationManager.cs",
-              "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Simulation\\SimulationManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Simulation\\SimulationManager.cs",
-              "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Simulation\\SimulationManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Simulation\\SimulationManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "TrafficGraph.cs",
+              "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\TrafficGraph.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\TrafficGraph.cs",
+              "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\TrafficGraph.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\TrafficGraph.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T06:01:33.329Z"
+              "WhenOpened": "2025-06-11T19:58:58.734Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Pathfinding.cs",
-              "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Pathfinding.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\Pathfinding.cs",
-              "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Pathfinding.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Core\\Pathfinding.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "GraphEdge.cs",
+              "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\GraphEdge.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\GraphEdge.cs",
+              "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\GraphEdge.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\GraphEdge.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T06:01:31.868Z"
+              "WhenOpened": "2025-06-11T19:54:43.137Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Graph.cs",
-              "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Graph.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\Graph.cs",
-              "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Graph.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Core\\Graph.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "GraphNode.cs",
+              "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\GraphNode.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\GraphNode.cs",
+              "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\GraphNode.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\GraphNode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T06:01:30.031Z"
+              "WhenOpened": "2025-06-11T19:52:53.028Z",
+              "EditorCaption": ""
             }
           ]
         }
