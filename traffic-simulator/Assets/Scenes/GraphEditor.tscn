@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dovntd6kyx65n"]
 
-[ext_resource type="Script" uid="uid://daopuvqik8dfs" path="res://Assets/Scripts/UI/GraphEditorUI.cs" id="1_rnjtu"]
+[ext_resource type="Script" uid="uid://50jkoj7iyrg2" path="res://Assets/Scripts/UI/GraphEditorUI.cs" id="1_rnjtu"]
 
 [node name="GraphEditor" type="Control"]
 layout_mode = 3

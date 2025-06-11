@@ -7,16 +7,20 @@
       "RelativeMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\simulation\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\core\\graph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\core\\graph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\core\\pathfinding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\core\\pathfinding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\simulation\\vehiclemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\simulation\\vehiclemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\simulation\\simulationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\simulation\\simulationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\simulation\\vehiclemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\simulation\\vehiclemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\core\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,8 +31,8 @@
       "RelativeMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\ui\\grapheditorui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\core\\graph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\core\\graph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|d:\\juego2\\traffic-simulator\\traffic-simulator\\assets\\scripts\\core\\edge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}|TRAFFIC SIMULATOR.csproj|solutionrelative:assets\\scripts\\core\\edge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,27 +59,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Graph.cs",
-              "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Graph.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\Graph.cs",
-              "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Graph.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Core\\Graph.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "Title": "GraphEditorUI.cs",
+              "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\UI\\GraphEditorUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\GraphEditorUI.cs",
+              "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\UI\\GraphEditorUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\GraphEditorUI.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowNoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T05:18:54.407Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T06:01:36.637Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Pathfinding.cs",
-              "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Pathfinding.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\Pathfinding.cs",
-              "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Pathfinding.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Core\\Pathfinding.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwE8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "VehicleManager.cs",
+              "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Simulation\\VehicleManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Simulation\\VehicleManager.cs",
+              "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Simulation\\VehicleManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Simulation\\VehicleManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T05:17:43.876Z",
+              "WhenOpened": "2025-06-11T06:01:35.118Z",
               "EditorCaption": ""
             },
             {
@@ -88,20 +91,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Simulation\\Vehicle.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T05:16:57.96Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VehicleManager.cs",
-              "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Simulation\\VehicleManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Simulation\\VehicleManager.cs",
-              "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Simulation\\VehicleManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Simulation\\VehicleManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T05:16:01.269Z",
+              "WhenOpened": "2025-06-11T06:01:34.18Z",
               "EditorCaption": ""
             },
             {
@@ -112,36 +102,61 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Simulation\\SimulationManager.cs",
               "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Simulation\\SimulationManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Simulation\\SimulationManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T05:15:05.46Z",
+              "WhenOpened": "2025-06-11T06:01:33.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Pathfinding.cs",
+              "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Pathfinding.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\Pathfinding.cs",
+              "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Pathfinding.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\Pathfinding.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T06:01:31.868Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "GraphEditorUI.cs",
-              "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\UI\\GraphEditorUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\GraphEditorUI.cs",
-              "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\UI\\GraphEditorUI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\GraphEditorUI.cs",
-              "ViewState": "AgIAALYAAAAAAAAAAAAswAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T05:13:40.073Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Node.cs",
               "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Node.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\Node.cs",
               "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Node.cs",
               "RelativeToolTip": "Assets\\Scripts\\Core\\Node.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T05:11:21.231Z",
+              "WhenOpened": "2025-06-11T06:01:30.937Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Graph.cs",
+              "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Graph.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\Graph.cs",
+              "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Graph.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\Graph.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T06:01:30.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Edge.cs",
+              "DocumentMoniker": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Edge.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\Edge.cs",
+              "ToolTip": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\Assets\\Scripts\\Core\\Edge.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\Edge.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAADwvzgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T06:01:28.938Z"
             }
           ]
         }
