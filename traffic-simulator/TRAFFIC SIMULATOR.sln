@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRAFFIC SIMULATOR", "TRAFFIC SIMULATOR.csproj", "{4E0ED4F6-1D88-4437-9402-C77C9CDA1EE3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRAFFIC SIMULATOR", "TRAFFIC SIMULATOR.csproj", "{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,11 +9,11 @@ Global
 	ExportRelease|Any CPU = ExportRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4E0ED4F6-1D88-4437-9402-C77C9CDA1EE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4E0ED4F6-1D88-4437-9402-C77C9CDA1EE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4E0ED4F6-1D88-4437-9402-C77C9CDA1EE3}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
-		{4E0ED4F6-1D88-4437-9402-C77C9CDA1EE3}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
-		{4E0ED4F6-1D88-4437-9402-C77C9CDA1EE3}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
-		{4E0ED4F6-1D88-4437-9402-C77C9CDA1EE3}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{9EF22456-AEE1-403C-AFC2-848AEDB15A2B}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
 	EndGlobalSection
 EndGlobal

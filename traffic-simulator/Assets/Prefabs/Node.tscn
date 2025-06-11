@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dsxoqrryr8gka"]
 
-[ext_resource type="Script" uid="uid://bi2t1dl2iodbt" path="res://Assets/Scripts/Core/Node.cs" id="1_7tn2y"]
+[ext_resource type="Script" uid="uid://dfh4trost8wxg" path="res://Assets/Scripts/Core/Node.cs" id="1_7tn2y"]
 
 [node name="Node" type="Node2D"]
 script = ExtResource("1_7tn2y")
@@ -15,6 +15,7 @@ mouse_filter = 1
 color = Color(0, 0, 1, 1)
 
 [node name="NodeID" type="Label" parent="Circle"]
+layout_mode = 0
 offset_top = 25.0
 offset_right = 59.0
 offset_bottom = 48.0

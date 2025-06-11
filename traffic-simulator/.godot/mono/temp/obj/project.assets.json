@@ -94,11 +94,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\JUEGO2\\TRAFFIC-SIMULATOR\\TRAFFIC-SIMULATOR\\TRAFFIC SIMULATOR.csproj",
+      "projectUniqueName": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\TRAFFIC SIMULATOR.csproj",
       "projectName": "TRAFFIC SIMULATOR",
-      "projectPath": "D:\\JUEGO2\\TRAFFIC-SIMULATOR\\TRAFFIC-SIMULATOR\\TRAFFIC SIMULATOR.csproj",
+      "projectPath": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\TRAFFIC SIMULATOR.csproj",
       "packagesPath": "C:\\Users\\RESYEN\\.nuget\\packages\\",
-      "outputPath": "D:\\JUEGO2\\TRAFFIC-SIMULATOR\\TRAFFIC-SIMULATOR\\.godot\\mono\\temp\\obj\\",
+      "outputPath": "D:\\Juego2\\Traffic-Simulator\\traffic-simulator\\.godot\\mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -131,7 +131,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -166,7 +166,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
