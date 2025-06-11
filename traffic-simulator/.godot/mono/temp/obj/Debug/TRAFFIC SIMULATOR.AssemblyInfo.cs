@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TRAFFIC SIMULATOR")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da4e981f7894116700e70e5196cbe7503cef2430")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fcdfe7dd5912b4756d2d431ef0ced73e079a8034")]
 [assembly: System.Reflection.AssemblyProductAttribute("TRAFFIC SIMULATOR")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TRAFFIC SIMULATOR")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
