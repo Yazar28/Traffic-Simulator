@@ -1,18 +1,39 @@
-[gd_scene load_steps=2 format=3 uid="uid://dl203t8id2yfs"]
+[gd_scene load_steps=8 format=3 uid="uid://dl203t8id2yfs"]
 
 [ext_resource type="Script" uid="uid://cw3vepblhndwo" path="res://Scripts/UI/GraphEditorUI.cs" id="1_ay02m"]
+[ext_resource type="PackedScene" uid="uid://gu0185v8icj8" path="res://Prefabs/Node.tscn" id="2_7wwa2"]
+[ext_resource type="PackedScene" uid="uid://byw06dp38eoi8" path="res://Prefabs/Edge.tscn" id="3_didlo"]
+[ext_resource type="Script" uid="uid://dyktat70qgojy" path="res://Scripts/Core/TrafficGraph.cs" id="4_ipu4u"]
+[ext_resource type="Script" uid="uid://dwn7e5ddabhvk" path="res://Scripts/Simulation/SimulationManager.cs" id="5_po8r6"]
+[ext_resource type="Script" uid="uid://c28maecsodrqv" path="res://Scripts/Simulation/VehicleManager.cs" id="6_cw3jf"]
+[ext_resource type="PackedScene" uid="uid://6bxawujetevu" path="res://Prefabs/Vehicle.tscn" id="7_d2206"]
 
-[node name="GraphEditor" type="Control"]
+[node name="GraphEditor" type="Control" node_paths=PackedStringArray("GraphCanvas", "Graph", "Simulation", "VehicleManager")]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_ay02m")
+NodePrefab = ExtResource("2_7wwa2")
+EdgePrefab = ExtResource("3_didlo")
+GraphCanvas = NodePath("GraphCanvas")
+Graph = NodePath("TrafficGraph")
+Simulation = NodePath("SimulationManager")
+VehicleManager = NodePath("VehicleManager")
 
 [node name="GraphCanvas" type="Node2D" parent="."]
+position = Vector2(1, 4)
 
 [node name="UI" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 18.0
+offset_top = 15.0
+offset_right = 150.0
+offset_bottom = 264.0
 
 [node name="Agregar Nodo" type="Button" parent="UI"]
 layout_mode = 2
@@ -25,19 +46,33 @@ text = "Conectar Nodos"
 [node name="HSeparator" type="HSeparator" parent="UI"]
 layout_mode = 2
 
+[node name="Simular Vehículos" type="Button" parent="UI"]
+layout_mode = 2
+text = "Simular Vehículos"
+
+[node name="VehicleCountSpinBox" type="SpinBox" parent="UI"]
+layout_mode = 2
+min_value = 1.0
+value = 1.0
+
+[node name="HSeparator2" type="HSeparator" parent="UI"]
+layout_mode = 2
+
 [node name="Peso de la arista" type="Label" parent="UI"]
 layout_mode = 2
 text = "Peso de la arista:"
 
 [node name="WeightSpinBox" type="SpinBox" parent="UI"]
 layout_mode = 2
-min_value = 0.1
 step = 0.1
 value = 0.1
 
 [node name="BlockCheckBox" type="CheckBox" parent="UI"]
 layout_mode = 2
 text = "Bloqueada"
+
+[node name="HSeparator3" type="HSeparator" parent="UI"]
+layout_mode = 2
 
 [node name="Eliminar Nodo" type="Button" parent="UI"]
 layout_mode = 2
@@ -46,3 +81,15 @@ text = "Eliminar Nodo"
 [node name="Eliminar Arista" type="Button" parent="UI"]
 layout_mode = 2
 text = "Eliminar Arista"
+
+[node name="TrafficGraph" type="Node2D" parent="."]
+script = ExtResource("4_ipu4u")
+
+[node name="SimulationManager" type="Node2D" parent="." node_paths=PackedStringArray("VehicleManager")]
+position = Vector2(7, 2)
+script = ExtResource("5_po8r6")
+VehicleManager = NodePath("../VehicleManager")
+
+[node name="VehicleManager" type="Node2D" parent="."]
+script = ExtResource("6_cw3jf")
+VehiclePrefab = ExtResource("7_d2206")

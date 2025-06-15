@@ -3,55 +3,50 @@ using System;
 
 public partial class TrafficGraph : Node
 {
-    // Diccionario de nodos: clave=NodeId, valor=instancia de GraphNode
-    private Godot.Collections.Dictionary<string, GraphNode> nodes = new Godot.Collections.Dictionary<string, GraphNode>();
+    private MyMap<string, GraphNode> nodes = new MyMap<string, GraphNode>();
 
-    // Añade un nodo al grafo
     public void AddNode(GraphNode node)
     {
         if (!nodes.ContainsKey(node.NodeId))
-            nodes[node.NodeId] = node;
+            nodes.Add(node.NodeId, node);
     }
 
-    // Elimina un nodo y todas sus aristas asociadas
     public void RemoveNode(string id)
     {
         if (!nodes.ContainsKey(id))
             return;
 
-        // 1) Limpiar aristas salientes
         var target = nodes[id];
         target.Edges.Clear();
 
-        // 2) Limpiar aristas entrantes
-        foreach (var kv in nodes)
+        for (int i = 0; i < nodes.Keys.Count; i++)
         {
-            var other = kv.Value;
-            for (int i = other.Edges.Count - 1; i >= 0; i--)
+            string key = nodes.Keys[i];
+            var other = nodes[key];
+
+            for (int j = other.Edges.Count - 1; j >= 0; j--)
             {
-                if (other.Edges[i].EndNode.NodeId == id)
-                    other.Edges.RemoveAt(i);
+                if (other.Edges[j].EndNode.NodeId == id)
+                    other.Edges.RemoveAt(j);
             }
         }
 
-        // 3) Eliminar nodo del diccionario
         nodes.Remove(id);
     }
 
-    // Añade una arista lógica entre dos nodos
-    public void AddEdge(string fromId, string toId, float weight)
+    public void AddEdge(string fromId, string toId, GraphEdge edge)
     {
         if (!nodes.ContainsKey(fromId) || !nodes.ContainsKey(toId))
             return;
 
         var from = nodes[fromId];
         var to = nodes[toId];
-        var edge = new GraphEdge();
-        edge.Initialize(from, to, weight);
+
+        edge.Initialize(from, to, edge.Weight);
         from.AddEdge(edge);
     }
 
-    // Elimina una arista lógica entre dos nodos
+
     public void RemoveEdge(GraphNode from, GraphNode to)
     {
         for (int i = from.Edges.Count - 1; i >= 0; i--)
@@ -61,9 +56,26 @@ public partial class TrafficGraph : Node
         }
     }
 
-    // Obtiene un nodo por su identificador
-    public GraphNode GetNode(string id) => nodes.ContainsKey(id) ? nodes[id] : null;
+    public GraphNode GetNode(string id)
+    {
+        return nodes.ContainsKey(id) ? nodes[id] : null;
+    }
 
-    // Retorna todos los nodos del grafo
-    public Godot.Collections.Dictionary<string, GraphNode> GetAllNodes() => nodes;
+    public MyMap<string, GraphNode> GetAllNodes()
+    {
+        return nodes;
+    }
+
+    public Godot.Collections.Array<string> GetAllNodeIds()
+    {
+        var result = new Godot.Collections.Array<string>();
+        for (int i = 0; i < nodes.Keys.Count; i++)
+            result.Add(nodes.Keys[i]);
+        return result;
+    }
+
+    public MyList<GraphNode> FindPath(string startId, string endId)
+    {
+        return new MyList<GraphNode>();
+    }
 }

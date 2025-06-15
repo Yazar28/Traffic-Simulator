@@ -3,30 +3,46 @@ using System;
 
 public partial class SimulationManager : Node
 {
-    [Export] public TrafficGraph Graph;
+    public TrafficGraph Graph;
     [Export] public VehicleManager VehicleManager;
 
-    // Inicia la simulación generando vehículos con rutas aleatorias
-    public void RunSimulation(int vehicleCount)
+    public async void RunSimulation(int count)
     {
-        // Lista de IDs de nodos para elegir puntos aleatorios
-        var keyArray = new Godot.Collections.Array<string>();
-        foreach (var k in Graph.GetAllNodes().Keys)
-            keyArray.Add(k);
+        VehicleManager.ClearVehicles();
 
-        RandomNumberGenerator rng = new RandomNumberGenerator();
-        rng.Randomize();
+        var nodeIds = Graph.GetAllNodeIds();
+        var rng = new Random();
 
-        for (int i = 0; i < vehicleCount; i++)
+        int created = 0;
+        int attempts = 0;
+
+        while (created < count && attempts < 100)
         {
-            int startIndex = rng.RandiRange(0, keyArray.Count - 1);
-            int endIndex = rng.RandiRange(0, keyArray.Count - 1);
-            if (startIndex == endIndex) continue;
+            attempts++;
+            if (nodeIds.Count < 2) return;
 
-            string startId = keyArray[startIndex];
-            string endId = keyArray[endIndex];
+            string start = nodeIds[rng.Next(nodeIds.Count)];
+            string end = nodeIds[rng.Next(nodeIds.Count)];
+            while (end == start)
+                end = nodeIds[rng.Next(nodeIds.Count)];
 
-            VehicleManager.SpawnVehicle(startId, endId);
+            if (VehicleManager.SpawnVehicle(start, end))
+            {
+                GD.Print($"✅ Vehículo creado de {start} a {end}");
+                created++;
+                await ToSignal(GetTree().CreateTimer(1.0f), "timeout");
+            }
+            else
+            {
+                GD.Print($"❌ Falló la creación del vehículo de {start} a {end}");
+            }
+        }
+
+        // ✅ Verificar al final si no se logró crear ninguno
+        if (created == 0)
+        {
+            GD.Print("⚠️ No se pudo crear ningún vehículo. Verifique conexiones o bloqueos.");
+            // Aquí podrías también activar un Popup o Label si querés mostrarlo en UI
         }
     }
 }

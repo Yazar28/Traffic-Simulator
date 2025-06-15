@@ -3,37 +3,53 @@ using System;
 
 public partial class Pathfinding : Node
 {
-    // Calcula la ruta más corta usando Dijkstra
-    public static Godot.Collections.Array<GraphNode> CalculateDijkstra(TrafficGraph graph, string startId, string endId)
+    public static MyList<GraphNode> CalculateDijkstra(TrafficGraph graph, string startId, string endId)
     {
         var nodes = graph.GetAllNodes();
-        var distances = new Godot.Collections.Dictionary<string, float>();
-        var previous = new Godot.Collections.Dictionary<string, string>();
-        var unvisited = new Godot.Collections.Array<string>();
+        var distances = new MyMap<string, float>();
+        var previous = new MyMap<string, string>();
+        var unvisited = new MyList<string>();
 
-        // Inicialización
-        foreach (var id in nodes.Keys)
+        for (int i = 0; i < nodes.Keys.Count; i++)
         {
-            distances[id] = float.PositiveInfinity;
-            previous[id] = null;
+            string id = nodes.Keys[i];
+            distances.Add(id, float.PositiveInfinity);
+            previous.Add(id, null);
             unvisited.Add(id);
         }
         distances[startId] = 0;
 
-        // Bucle principal
         while (unvisited.Count > 0)
         {
             string currentId = GetMinDistanceNode(distances, unvisited);
             if (currentId == endId)
                 break;
 
-            unvisited.Remove(currentId);
+            for (int i = 0; i < unvisited.Count; i++)
+            {
+                if (unvisited[i] == currentId)
+                {
+                    unvisited.RemoveAt(i);
+                    break;
+                }
+            }
+
             var currentNode = nodes[currentId];
 
-            foreach (var edge in currentNode.Edges)
+            for (int i = 0; i < currentNode.Edges.Count; i++)
             {
+                var edge = currentNode.Edges[i];
                 string neighborId = edge.EndNode.NodeId;
-                if (!unvisited.Contains(neighborId)) continue;
+
+                GD.Print($"Evaluando arista desde {currentId} hacia {neighborId} - Peso: {edge.Weight}");
+
+                bool isUnvisited = false;
+                for (int j = 0; j < unvisited.Count; j++)
+                    if (unvisited[j] == neighborId)
+                        isUnvisited = true;
+
+                if (!isUnvisited)
+                    continue;
 
                 float alt = distances[currentId] + edge.Weight;
                 if (alt < distances[neighborId])
@@ -44,40 +60,46 @@ public partial class Pathfinding : Node
             }
         }
 
-        return BuildPath(previous, nodes, startId, endId);
+        return BuildPath(previous, nodes, startId, endId); // ✅ ahora sí está dentro del método
     }
 
-    // Encuentra el nodo sin visitar con la distancia mínima
-    private static string GetMinDistanceNode(Godot.Collections.Dictionary<string, float> distances, Godot.Collections.Array<string> unvisited)
+    private static string GetMinDistanceNode(MyMap<string, float> distances, MyList<string> unvisited)
     {
         float minDist = float.PositiveInfinity;
         string minNode = null;
-        foreach (var id in unvisited)
+
+        for (int i = 0; i < unvisited.Count; i++)
         {
-            if (distances[id] < minDist)
+            string id = unvisited[i];
+            float dist = distances[id];
+            if (dist < minDist)
             {
-                minDist = distances[id];
+                minDist = dist;
                 minNode = id;
             }
         }
+
         return minNode;
     }
 
-    // Reconstruye la ruta desde el mapa "previous"
-    private static Godot.Collections.Array<GraphNode> BuildPath(Godot.Collections.Dictionary<string, string> previous, Godot.Collections.Dictionary<string, GraphNode> nodes, string startId, string endId)
+    private static MyList<GraphNode> BuildPath(MyMap<string, string> previous, MyMap<string, GraphNode> nodes, string startId, string endId)
     {
-        var path = new Godot.Collections.Array<GraphNode>();
-        var currentId = endId;
+        var path = new MyList<GraphNode>();
+        string currentId = endId;
 
         while (currentId != null)
         {
-            path.Insert(0, nodes[currentId]);
+            path.Add(nodes[currentId]);
             currentId = previous[currentId];
         }
 
-        if (path.Count == 0 || path[0].NodeId != startId)
-            return new Godot.Collections.Array<GraphNode>();
+        if (path.Count == 0 || path[path.Count - 1].NodeId != startId)
+            return new MyList<GraphNode>();
 
-        return path;
+        var reversed = new MyList<GraphNode>();
+        for (int i = path.Count - 1; i >= 0; i--)
+            reversed.Add(path[i]);
+
+        return reversed;
     }
 }
